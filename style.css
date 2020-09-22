@@ -1,0 +1,706 @@
+@charset "UTF-8";
+/* basewhite #F8F4F4
+	mainblack #1E2633
+	accentpink #D6968D
+	backgroundgray #E8E8ED
+	linkcolor #184FCC
+*/
+
+p {
+	font-family: "Toppan Bunkyu Gothic Pr6N";
+}
+
+.backgroundgray {
+	background-color: #E8E8ED;
+}
+
+header {
+	background-color: #1E2633;
+	height: 70px;
+}
+
+.header-navwrap {
+	background-color: #1E2633;
+	position: absolute;
+	width: 100%;
+}
+
+/*sticky-header*/
+.header-navwrap.sticky {
+	position: fixed;
+	top: 0;
+	z-index: 4;
+}
+
+.header-logo {
+	margin: 0;
+	padding: 16px;
+	display: inline-block;
+}
+
+
+
+
+/*メニュボタン*/
+.menu-btn {
+	display: inline-block;
+	position: absolute;
+    top: 15px;
+    right: 5px;
+	height: 45px;
+	z-index: 4;/*メニュー展開時の上がさね*/
+}
+
+.menu-btn img {
+	width: 33px;
+}
+
+.menu-btn p {
+	margin: 0;
+	position: relative;
+	bottom: -11px;
+	font-size: 8px;
+	color: #F8F4F4;
+	text-align: center;
+}
+
+.panel-btn{
+  	display: inline-block;
+  	position: relative;
+  	width: 45px;
+}
+
+.panel-btn-icon{
+	background: #F8F4F4;
+  	display: block;
+	height: 3px;
+	left: 50%;
+	margin: -2px 0 0 -12px;
+  	position: absolute;
+	transition: .2s;
+  	top: 47%;
+	width: 24px;
+}
+
+.panel-btn-icon:before, .panel-btn-icon:after{
+	background: #F8F4F4;
+	content: "";
+  	display: block;
+	height: 3px;
+	left: 0;
+  	position: absolute;
+	transition: .3s;
+  	top: 50%;
+	width: 24px;
+}
+
+.panel-btn-icon:before{
+ 	margin-top: -11px;
+}
+
+.panel-btn-icon:after{
+  	margin-top: 7px; 
+}
+
+.panel-btn .switch{
+	background: transparent;
+	margin: -4px 0 0 -12px;
+}
+
+.panel-btn .switch:before, .panel-btn .switch:after{
+  	margin-top: 0;
+}
+
+.panel-btn .switch:before{
+  	transform: rotate(-45deg);
+  	-webkit-transform: rotate(-45deg);
+}
+
+.panel-btn .switch:after{
+  	transform: rotate(-135deg);
+  	-webkit-transform: rotate(-135deg);
+}
+
+
+
+/*メニュボタンオープン時*/
+.header-nav {
+	margin-top: 90px;
+	padding: 0px;
+}
+
+.header-nav a {
+	color: #D6968D;
+	text-decoration: none;
+	font-size: 6vw;
+}
+/*
+.header-nav li a:before {
+	content: '';
+	width: 0;
+	left: 50%;
+	bottom: 0;
+	transition: all 0.3s ease;
+	border-bottom: 3px solid #ffffff;
+	position: absolute;
+	display: block;
+}
+
+.header-nav li a:hover:before {
+	width: 50%;
+	border-bottom: 3px solid #ffffff;
+	
+}
+
+.header-nav li a:after {
+	content: '';
+	width: 0;
+	right: 50%;
+	bottom: 0;
+	transition: all 0.3s ease;
+	border-bottom: 3px solid #ffffff;
+	position: absolute;
+	display: block;
+}
+
+.header-nav li a:hover:after {
+	width: 50%;
+	border-bottom: 3px solid #ffffff;
+}
+
+
+.header-nav > li {
+	text-align: center;
+	margin: 8vw 0px;
+}
+*/
+/*メインビジュアル*/
+
+.main-visual {
+	background-color: #D6968D;
+	margin-bottom: 25px;/*main-visual_contentのマイナスマージン相殺*/
+}
+
+.main-visual_content {
+	background-color: #D6968D;
+    text-align: center;
+    position: relative;
+    top: 25px;
+}
+
+.main-visual_content img {
+	width: 85%;
+	height: auto;
+}
+
+.main-visual_content h1,.main-visual_content h2 {
+	color: #F8F4F4;
+}
+
+.main-visual_content h1 {
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	font-size: 47px;
+}
+
+.main-visual_content h2 {
+	font-size: 18px;
+	padding-bottom: 60px;
+}
+
+/*新着情報*/
+
+.news {
+	margin: 20px;
+	padding: 28px 20px 20px 20px;
+}
+
+.news-title {
+	font-size: 24px;
+	margin: 20px 0 5px 0;
+}
+
+.news-underline {
+	height: 2px;
+    background: black;
+    display: block;
+}
+
+
+.news img {
+	width: 85%;
+	height: auto;
+	padding-top: 30px;
+}
+
+/*メインコンテンツ*/
+
+.main-content_wrapper {
+	background-color: #ffffff;
+	margin: 5vw 2%;
+	border-radius: 4%;
+	padding-bottom: 60px;
+}
+
+.main-content_thumbnail_L {
+	margin-bottom: 20px; /*画像トップのマージン２０pxによるボトム領域の修正*/
+}
+
+/*コンテンツ画像汎用パーツ（style属性でbackground-image設定）*/
+.content-image1,.content-image2,.content-image3,.content-image4 {
+	width: 100%;
+	height: 57.2vw;
+	background-size: cover;
+	position: relative;
+	top: 25px;
+}
+/*↑↑*/
+
+/*画像のテキスト設定（左基準）*/
+
+.main-content_thumbnail_L h1,.main-content_thumbnail_L p,.main-content_thumbnail_R h1,.main-content_thumbnail_R p {
+	position: relative;
+	z-index: 2;
+	padding: 10px 15px;
+	display: inline-block;
+}
+
+.main-content_thumbnail_L h1,.main-content_thumbnail_R h1 {
+	bottom: -4.3em;
+	background: #1E2633;
+	color: #F8F4F4;
+	font-size: 5vw;
+}
+
+.main-content_thumbnail_L p,.main-content_thumbnail_R p {
+	bottom: -5.2em;
+	background: #F8F4F4;
+	color: #1E2633;
+	font-size: 3.5vw;
+}
+
+/*↑↑*/
+
+/*右寄せのみ*/
+
+.main-content_thumbnail_R h1 {
+	float: right;
+}
+
+.main-content_thumbnail_R p {
+	float: right;
+}
+
+/*↑↑*/
+
+.main-content_text {
+	margin: 20px 40px;
+	padding-top: 20px;
+	letter-spacing: 0.1em;
+	line-height: 1.5em;
+	font-size: 3.2vw}
+
+.readmore {
+	border: #1E2633 solid 3px;
+	border-radius: 20px;
+	font-size: 16px;
+	margin:0 40px;
+	float: right;
+}
+
+.readmore a {
+	padding: 8px 18px;
+	border-radius: 16px;
+	z-index: 2;
+	display: block;
+	text-decoration: none;
+	color: #1E2633;
+}
+
+.contact-image {
+	height: 42vw;
+    background-size: cover;
+	position: relative;
+}
+
+.contact-text { 
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+	/*↑テキスト中央ぞろえ↑*/
+}
+
+.contact-text a {
+	color: #ffffff;
+    background-color: #1E2633;
+    padding: 10px 25px;
+    border-radius: 23px;
+    font-size: 20px;
+	text-decoration: none;
+}
+
+.contact-text a:hover {
+	color: #D6968D;
+}
+
+footer {
+	background-color: #1E2633;
+	color: #E5E8ED;
+	text-align: center;
+}
+
+.company-name {
+	margin: 0;
+	padding: 15px;
+	font-size: 1.3em;
+}
+
+.company-address {
+	margin: 5px;
+}
+
+.footer-nav {
+	display: flex;
+	justify-content: space-between;
+	margin: 4em 10vw 2em 10vw;
+	padding: 0;
+	font-size: .8em;
+}
+
+.footer-nav a {
+	text-decoration: none;
+	color: #E5E8ED;
+	font-size: 1em;
+	white-space: nowrap;
+}
+
+.footer-nav a:hover {
+	color: #D6968D;
+}
+
+.right {
+	margin: 0;
+	padding-bottom: 15px;
+	font-size: .5em;
+}
+
+/*↓各コンテンツ*/
+.content-wrap {
+	position: relative;
+}
+
+.content-wrap h1 {
+	color: azure;
+	font-size: 26px;
+}
+
+.image-background1,.image-background2,.image-background3,.image-background4 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30vw;
+	background-size: cover;
+}
+
+.homelink {
+	margin: 0 11vw;
+}
+
+.homelink a {
+	border-bottom: 1px solid #184FCC;
+	color: #1E2633;
+	font-weight: 600;
+}
+
+.homelink a:hover {
+	color: #184FCC;
+}
+
+
+.homelink img {
+	width: 1em;
+	margin: 0 5px 0 0;
+}
+
+.content-text {
+	margin: 30px 11vw;
+	font-size: 1em;
+	letter-spacing: .1em;
+	font-family: "Toppan Bunkyu Gothic Pr6N";
+	line-height: 2.1em;
+	text-align: center;
+}
+
+.content-text figure {
+	margin: 20px auto;
+}
+
+.content-text img {
+	width: 100%;
+	
+}
+
+.content-text figcaption {
+	font-size: .6em;
+	letter-spacing: normal;
+	line-height: normal;
+	
+}
+
+.onlinestorelink {
+	margin: 70px auto 90px auto;
+	text-align: center;
+}
+
+.onlinestorelink img {
+	width: 65vw;
+}
+
+.onlinestorelink p {
+	font-size: 1.4em;
+	margin-top: 0;
+}
+
+.storelink-btn {
+	text-align: center;
+}
+
+.storelink-btn p {
+	font-size: 1em;
+	background-color: #D6968D;
+	width: 270px;
+    margin: 0 auto;
+    border-radius: 15px;
+
+}
+
+.storelink-btn a {
+	color: #1E2633;
+	font-size: 1em;
+	display: inline-flex;
+	padding: 20px 18px;
+	white-space: nowrap;
+}
+
+.storelink-btn a:hover {
+	color: #184FCC;
+}
+
+.storelink-btn img {
+    height: 1.2em;
+    width: auto;
+	margin: 0 5px;
+}
+
+/*↑↑*/
+
+/*↓↓プライバシーポリシー*/
+.container-wrap {
+	margin: 60px 11vw 50px 11vw;
+	font-family: "Toppan Bunkyu Gothic Pr6N";
+	line-height: 1.7em;
+}
+
+.container-wrap h1 {
+	text-align: center;
+}
+/*↑↑*/
+
+/*↓↓お問い合わせ*/
+.phone {
+    height: 90%;
+}
+
+.phone-button {
+	background-color: #E87C00;
+    border-radius: 8px;
+	height: 40px;
+	margin: 30px 0;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+    padding: 11px 18px;
+	position: relative; /*aタグのリンク範囲指定のため*/
+	width: 280px;
+}
+
+.phone-wrapper {
+	display: flex;
+	left: 33%;
+	position: absolute;
+}
+
+.phone-link {
+	border-radius: 8px;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+}
+
+.phone-link:hover {
+	background: rgba(0,0,0,0.3);
+}
+
+.phoneicon {
+	height: 40px;
+	margin: 0;
+}
+
+.phone-text {
+	color: #fff;
+	font-size: 8px;
+	margin: 0 0 0 5px;
+}
+
+.phone-text span {
+	font-size: 18px;
+}
+
+/*↑↑*/
+
+/*width for tablet*/
+@media screen and (min-width: 481px) {
+	
+	.main-content_wrapper {
+		margin: 5vw 8%;
+	}
+	
+	.news {
+		margin: 20px 8%;
+		padding: 20px 0;
+	}
+/*↓各コンテンツページ*/
+	.content-wrap h1 {
+	
+	font-size: 32px;
+}
+	
+	.onlinestorelink > img {
+		width: 400px;
+	}
+}
+
+/*width for pc*/
+@media screen and (min-width: 1025px) {
+	
+	.header-navwrap {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.topnav {
+		position: relative;
+		right: 0;
+		width: auto;
+		padding-right: 25px;
+	}
+	
+	.header-nav {
+		margin: 8px;
+		display: flex;
+	}
+	.header-nav a {
+		font-size: 1.2em;
+		white-space: nowrap;
+	}
+	.header-nav > li {
+		text-align: inherit;
+		padding: 16px;
+		margin: 0 10px;
+	}
+	
+	.menu-btn {
+		display: none;
+	}
+	
+	.main-visual_content img {
+		width: 34vw;
+	}
+	
+	.main-visual_content h1 {
+		margin: 2px;
+		font-size: 4.7vw;
+		font-family: "Heisei Maru Gothic Std";
+		letter-spacing: 4px;
+	}
+	
+	.main-visual_content h2 {
+		padding-bottom: 40px;
+		font-family: "Toppan Bunkyu Gothic Pr6N";
+	}
+	
+	.news {
+		margin: 20px 25vw;
+	}
+	
+	.pcwidth {
+		display: flex;
+		padding: 25px 12.2vw;
+	}
+	
+	.main-content_wrapper {
+		margin: 20px;
+		flex: 2;
+		border-radius: 21px;
+		padding-bottom: 3vw;
+	}
+	
+	.content-image1, .content-image2, .content-image3, .content-image4 {
+		width: 90%;
+		height: 18vw;
+		margin-left: 20px;
+		
+	}
+	
+	.main-content_thumbnail_L h1, .main-content_thumbnail_R h1 {
+		font-size: 1.5vw;
+		bottom: -4.4em;
+		white-space: nowrap;
+		padding: 10px;
+	}
+	
+	.main-content_thumbnail_L p, .main-content_thumbnail_R p {
+		font-size: 1.1vw;
+		bottom: -5.2em;
+	}
+	
+	.main-content_text {
+		font-size: 1vw;
+		height: 9vw;
+	}
+	
+	.readmore a {
+		font-size: 1vw;
+	}
+	
+	.contact-image {
+		margin: 20px 13.3vw;
+		height: 280px;
+		background-size: cover;
+	}
+	
+/*↓各コンテンツページ*/
+	.content-wrap h1 {
+	color: azure;
+	font-size: 42px;
+	}
+	
+	.image-background {
+		height: 18vw;
+	}
+	
+	.homelink {
+		margin: 0 20vw;
+	}
+	
+	.content-text {
+		margin: 60px 20vw;
+	}
+	
+	.onlinestorelink > img {
+		width: 400px;
+	}
+}
