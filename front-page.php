@@ -19,7 +19,8 @@
 		<span class="news-underline"></span>
 		<p>2020.6.20 オンラインストア開設</p>
 		<p>2020.6.23 メロン販売開始</p>
-		<img src="<?php echo get_template_directory_uri(); ?>/images/あきんどやメロン開始バナー.jpg" alt="令和２年度夕張メロンご購入はこちら">
+		<a href="<?php echo esc_url( get_option( 'storelink_section' )); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/あきんどやメロン開始バナー.jpg" alt="令和２年度夕張メロンご購入はこちら">
+		</a>
 	</aside>
 	
 <!--新着情報-->
@@ -36,7 +37,10 @@
 				</div>
 			</div>
 		<p class="main-content_text">夕張あきんど屋は創業以来、夕張メロンの販売に力を入れてきました。おかげさまで現在ではリピーター様に愛され、大変好評です。日持ちのしないフルーツですので、朝一番で仕入れて食べ頃一歩手前で販売しています。店頭での販売はもちろん、オンラインストアでもご注文いただけます。</p>
-		<p id="readmore" class="readmore"><a href="#">続きはこちら</a></p>
+		<p id="readmore" class="readmore"><a href="<?php
+				 $page_id = get_option( 'content_section1' ); 
+				 echo esc_url(get_permalink($page_id)); //固定ページIDからURL取得
+	?>">続きはこちら</a></p>
 			</section>
 		</div>
 	
@@ -54,7 +58,10 @@
 			</div>
 		<p class="main-content_text">市場では厳しく、そして大胆に競り落とします。良いものを少しでも多くのお客様に届けるため、朝一番の競りは少しも手を抜けません。その日の品揃えに大きく影響するため、普段は笑顔の社長もこの時ばかりは鋭い目に。
 		</p>
-		<p class="readmore"><a href="#">続きはこちら</a></p>
+		<p class="readmore"><a href="<?php
+				 $page_id = get_option( 'content_section2' ); 
+				 echo esc_url(get_permalink($page_id)); //固定ページIDからURL取得
+	?>">続きはこちら</a></p>
 			</section>
 		</div>
 	
@@ -73,7 +80,10 @@
 				</div>
 			</div>
 			<p class="main-content_text">美味しさにこだわり、実際に畑を尋ねることも。市場では出回らないような野菜は、生産者と真摯に向き合い信頼関係を築くことで、当店から販売させてもらっています。どこの八百屋よりも美味しいものをお届けしたいから、あきんど屋はこだわり続けます。</p>
-			<p class="readmore"><a href="#">続きはこちら</a></p>
+			<p class="readmore"><a href="<?php
+				 $page_id = get_option( 'content_section3' ); 
+				 echo esc_url(get_permalink($page_id)); //固定ページIDからURL取得
+	?>">続きはこちら</a></p>
 			</section>
 		</div>
 	
@@ -90,7 +100,10 @@
 				</div>
 			</div>
 			<p class="main-content_text">特大のジャガイモと独創的なトッピングの数々で、いつも行列が絶えません！！社長のイチオシは、イカの塩辛のせじゃがバター！もちろん食材は全て北海道産ですよ。さあ、あなたは何をトッピングしてみますか？出店イベントはスケジュールからご確認ください！</p>
-			<p class="readmore"><a href="#">続きはこちら</a></p>
+			<p class="readmore"><a href="<?php
+				 $page_id = get_option( 'content_section4' ); 
+				 echo esc_url(get_permalink($page_id)); //固定ページIDからURL取得
+	?>">続きはこちら</a></p>
 			</section>
 		</div>
 	
@@ -98,7 +111,10 @@
 	</div>
 	
 	<div class="contact-image">
-		<p class="contact-text"><a href="#">お問い合わせ</a></p>
+		<p class="contact-text"><a href="<?php
+				 $page_id = get_option( 'contact_section' ); 
+				 echo esc_url(get_permalink($page_id)); //固定ページIDからURL取得
+	?>">お問い合わせ</a></p>
 	</div>
 	
 	<div class="sns">

@@ -6,7 +6,7 @@
 <meta name="keywords" content="夕張メロン,じゃがバター,清水沢,八百屋">
 <meta name="Description" content="夕張メロン・農水産物専門店　地元夕張で北海道の絶品グルメを販売しています。オンラインストアから全国発送承ります。">
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-<link rel="shortcut icon" href="yubariakindoya.jp">
+<link rel="shortcut icon" href="file:///Macintosh HD/Applications/MAMP/htdocs/wordpress/wp-content/themes/akindorenewal/yubariakindoya.jp">
 
 <!--OGP情報-->
     <meta property="og:title" content="夕張あきんど屋">
@@ -184,13 +184,15 @@ $(function(){
 	}
 	
 </style>
+	
+	<?php wp_head(); ?>
 </head>
 
 <body>
 
 	<header role="banner">
 		<div class="header-navwrap">
-		<h1 class="header-logo"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/店舗ロゴ２.png" width="197" height="23" alt="夕張あきんど屋"></a></h1>
+		<h1 class="header-logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/店舗ロゴ２.png" width="197" height="23" alt="夕張あきんど屋"></a></h1>
 			
 			<nav class="topnav" id="js__open">
 				<ul class="header-nav" id="header-nav">
