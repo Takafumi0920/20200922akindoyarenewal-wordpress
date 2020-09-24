@@ -26,6 +26,10 @@ function akindoyawp_setup() {
 		'global' => 'トップページナビ',
 	));
 	
+	register_nav_menus( array( //カスタムメニュー機能の追加
+		'footer' => 'フッター', //'ここで指定した引数を、htmlでメニューを表示する際のwp_nav_menuメソッドの連想配列に使用する' => 'メニュー位置の名前を指定'
+	) );
+	
 }
 
 add_action( 'after_setup_theme' , 'akindoyawp_setup' );
@@ -40,57 +44,6 @@ function akindoyawp_widgets_init() {
 }
 add_action( 'widgets_init','akindoyawp_widgets_init');
 
-//管理画面メニューからliタグクラスを入力し、aタグのクラスとして付与する。出典：https://blog.simmon.design/add-any-classes-to-custom-menu-link-in-wordpress/
-add_filter( 'walker_nav_menu_start_el', function( $item_output, $item ) {
-
-    $link_classes = '';
-    // カスタムメニューのリストに付いているクラスはデフォルトでmenu-itemとcurrent-という文字が含まれているので、
-    // それが含まれていないクラス（フォームから追加したクラス）を取得し、link_classesに格納。
-    foreach( $item->classes as $class ) {
-        if ( false === strpos( $class, 'menu-item' ) && false === strpos( $class, 'current-' ) && '' !== $class ) {
-            $link_classes .= $class . ' ';
-        }
-    }
-
-    // フォームから取得したクラス達（$link_classes）をaタグに追加してreturn。
-    if ( '' !== $link_classes ) {
-        return str_replace( 'href',  'class="' . $link_classes . '" href', $item_output );
-    } else {
-        return $item_output;
-    }
-
-}, 10, 2 );
-
-// このままだとリストにも同じクラスが付いたままになるので
-// menu-itemとcurrent-の文字を含まないクラス（フォームから追加したクラス）をリストから削除します。
-add_filter( 'nav_menu_css_class', function( $classes, $item ) {
-
-    foreach( $classes as $i => $class ) {
-        if ( false === strpos( $class, 'menu-item' ) && false === strpos( $class, 'current-' ) && '' !== $class ) {
-            unset( $classes[$i] );
-        }
-    }
-
-    return $classes;
-
-}, 10, 2 );
-
-//ヘッダーナビに検索フォームを挿入
-
-add_filter('wp_nav_menu_items','add_search_box', 10, 2);
-function add_search_box($items, $args) {
- ob_start();
- get_search_form();
- $searchform = ob_get_contents();
- ob_end_clean();
-  $items .= '
-
-' . $searchform . '
-
-
-';
- return $items;
-}
 
 
 /*テーマカスタマイザー：実装*/
@@ -172,10 +125,6 @@ $wp_customize->add_control( 'storelink_section', array(
 //アクションフックに登録
 add_action( 'customize_register' , 'akindoyawp_customize_register' );
 
-/*footer*/
 
-register_nav_menu('footer-left','フッター買う');
-register_nav_menu('footer-center','フッター知る');
-register_nav_menu('footer-right','フッターヘルプ');
 
 

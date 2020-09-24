@@ -1,10 +1,30 @@
-@charset "UTF-8";
+
+/*
+Theme Name: 夕張あきんど屋専用テーマ2.0
+Theme URI: 
+Author: Takafumi Yamamoto
+Author URI: https://yutori-farmer.com
+Description:夕張あきんど屋のサイト専用テーマです。
+Version: 2.0
+Text Domain: 
+
+*/
+
+
+/* 規則 
+・idにスタイルを当てない。優先度が高く後から上書きが聞かないから
+・汎用タグでスタイルを指定しない。タグの変更があっても対応できるようにクラスで指定
+・marginはtopで当てる
+・画面幅はiphone8の375pxを基準に考える
+*/
 /* basewhite #F8F4F4
 	mainblack #1E2633
+	subblack #717780
 	accentpink #D6968D
 	backgroundgray #E8E8ED
 	linkcolor #184FCC
 */
+@charset "UTF-8";
 
 p {
 	font-family: "Toppan Bunkyu Gothic Pr6N";
@@ -127,13 +147,19 @@ header {
 .header-nav {
 	margin-top: 90px;
 	padding: 0px;
+	text-align: center;
 }
 
 .header-nav a {
 	color: #D6968D;
 	text-decoration: none;
-	font-size: 6vw;
+	font-size: 4.5vw;
 }
+.header-nav li {
+		text-align: inherit;
+		padding: 20px;
+		margin: 0 10px;
+	}
 /*
 .header-nav li a:before {
 	content: '';
@@ -559,6 +585,28 @@ footer {
 	font-size: 18px;
 }
 
+.icon {
+	text-align: center;
+	margin-top: 150px;
+}
+
+.icon p {
+	font-size: 1.3em;
+}
+
+.fa-phone {
+	transform: scale(2.5);
+	background-color: #1E2633;
+    padding: 10px;
+	margin: 20px;
+    border-radius: 20px;
+	color: #F8F4F4;
+}
+
+.contact-wrap {
+	text-align: center;
+}
+
 /*↑↑*/
 
 /*width for tablet*/
@@ -602,15 +650,18 @@ footer {
 		margin: 8px;
 		display: flex;
 	}
-	.header-nav a {
-		font-size: 1.2em;
-		white-space: nowrap;
-	}
-	.header-nav > li {
+	
+	.header-nav li {
 		text-align: inherit;
 		padding: 16px;
 		margin: 0 10px;
 	}
+	
+	.header-nav a {
+		font-size: 1.2em;
+		white-space: nowrap;
+	}
+	
 	
 	.menu-btn {
 		display: none;

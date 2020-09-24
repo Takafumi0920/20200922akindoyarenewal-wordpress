@@ -5,6 +5,7 @@ Template Name: content1
 ?>
 
 <?php get_header(); ?>
+<div id="menuclose-wrap">
 <div class="content-wrap">
 
 		<div class="image-background1">

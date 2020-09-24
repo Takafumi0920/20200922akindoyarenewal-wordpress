@@ -11,7 +11,7 @@
 <!--OGP情報-->
     <meta property="og:title" content="夕張あきんど屋">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.senbikiya.co.jp/images/common/ogp-img.png">
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/fabicon.jpg">
     <meta property="og:description" content="夕張メロン・農水産物専門店　地元夕張で北海道の絶品グルメを販売しています。オンラインストアから全国発送承ります。">
     <meta property="og:url" content="https://yubariakindoya.jp">
     <meta property="og:site_name" content="夕張メロン・農水産物専門店">
@@ -21,11 +21,15 @@
 	
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style/normalize.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style/menu.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style/contactform7.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.5.1.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.js"></script>
 <!--<script src="/js/menu.js"></script>
+
+<!--font awesome library-->
+<script src="https://kit.fontawesome.com/f8312f0c83.js" crossorigin="anonymous"></script>
 	
 <!--fontlibrary-->
 <script>
@@ -192,15 +196,30 @@ $(function(){
 
 	<header role="banner">
 		<div class="header-navwrap">
-		<h1 class="header-logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/店舗ロゴ２.png" width="197" height="23" alt="夕張あきんど屋"></a></h1>
+		<h1 class="header-logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/mainlogo.png" width="197" height="23" alt="夕張あきんど屋"></a></h1>
 			
 			<nav class="topnav" id="js__open">
 				<ul class="header-nav" id="header-nav">
+				<?php if (has_nav_menu( 'global' )) : ?>
+	  
+		<?php wp_nav_menu( array(
+			'theme_location' => 'global',
+			'menu_id'		=> 'header-nav',
+			'menu_class'		=> 'header-nav',
+			'container'		=> 'false',//<ul class="header-nav"></ul>をラップしない
+			'items_wrap' => '%3$s',//自動生成される<ul>を削除する（管理画面メニュから追加するページとは別に<li>を挿入可能）
+ 
+		)); ?>
+				
+		<?php endif; ?>
+				<!--<ul class="header-nav" id="header-nav">
 					<li><a href="#">アクセス</a></li>
 					<li><a href="#">オンラインストア</a></li>
 					<li><a href="#">イベント情報</a></li>
 					<li><a href="#">ブログ</a></li>
 					<li><a href="#">お問い合わせ</a></li>
+				</ul>-->
+					<li><a href="<?php echo esc_url( get_option( 'storelink_section' )); ?>">オンラインストア</a></li>
 				</ul>
 			</nav>
 			<div class="menu-btn" id="menu-btn">
