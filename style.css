@@ -1,4 +1,4 @@
-
+@charset "UTF-8";
 /*
 Theme Name: 夕張あきんど屋専用テーマ2.0
 Theme URI: 
@@ -24,7 +24,7 @@ Text Domain:
 	backgroundgray #E8E8ED
 	linkcolor #184FCC
 */
-@charset "UTF-8";
+
 
 p {
 	font-family: "Toppan Bunkyu Gothic Pr6N";
@@ -132,20 +132,20 @@ header {
 }
 
 .panel-btn .switch:before{
-  	transform: rotate(-45deg);
   	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
 .panel-btn .switch:after{
-  	transform: rotate(-135deg);
   	-webkit-transform: rotate(-135deg);
+	transform: rotate(-135deg);
 }
 
 
 
 /*メニュボタンオープン時*/
 .header-nav {
-	margin-top: 90px;
+	margin-top: 120px;
 	padding: 0px;
 	text-align: center;
 }
@@ -224,8 +224,9 @@ header {
 }
 
 .main-visual_content h1 {
-	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
-	font-size: 47px;
+	font-family: "Heisei Maru Gothic Std";
+	font-size: 40px;
+	white-space: nowrap;
 }
 
 .main-visual_content h2 {
@@ -251,11 +252,20 @@ header {
     display: block;
 }
 
+.date {
+    width: 91.781px;
+}
+
 
 .news img {
 	width: 85%;
 	height: auto;
 	padding-top: 30px;
+}
+
+.news-line p {
+    display: inline-block;
+	margin: 1em 10px .3em 10px;
 }
 
 /*メインコンテンツ*/
@@ -283,7 +293,7 @@ header {
 
 /*画像のテキスト設定（左基準）*/
 
-.main-content_thumbnail_L h1,.main-content_thumbnail_L p,.main-content_thumbnail_R h1,.main-content_thumbnail_R p {
+.main-content_thumbnail_L h1,.main-content_thumbnail_R h1 {
 	position: relative;
 	z-index: 2;
 	padding: 10px 15px;
@@ -291,18 +301,13 @@ header {
 }
 
 .main-content_thumbnail_L h1,.main-content_thumbnail_R h1 {
-	bottom: -4.3em;
+	bottom: -7.8em;
 	background: #1E2633;
 	color: #F8F4F4;
-	font-size: 5vw;
+	font-size: 4.5vw;
 }
 
-.main-content_thumbnail_L p,.main-content_thumbnail_R p {
-	bottom: -5.2em;
-	background: #F8F4F4;
-	color: #1E2633;
-	font-size: 3.5vw;
-}
+
 
 /*↑↑*/
 
@@ -312,9 +317,7 @@ header {
 	float: right;
 }
 
-.main-content_thumbnail_R p {
-	float: right;
-}
+
 
 /*↑↑*/
 
@@ -388,16 +391,17 @@ footer {
 .footer-nav {
 	display: flex;
 	justify-content: space-between;
-	margin: 4em 10vw 2em 10vw;
+	margin: 3em 10px 1em 10px;
 	padding: 0;
-	font-size: .8em;
+	
 }
 
 .footer-nav a {
 	text-decoration: none;
 	color: #E5E8ED;
-	font-size: 1em;
+	font-size: .7em;
 	white-space: nowrap;
+	margin: 0px 10px;
 }
 
 .footer-nav a:hover {
@@ -413,6 +417,7 @@ footer {
 /*↓各コンテンツ*/
 .content-wrap {
 	position: relative;
+	padding-bottom: 50px;
 }
 
 .content-wrap h1 {
@@ -518,6 +523,34 @@ footer {
 	margin: 0 5px;
 }
 
+.cakemix {
+	width: 400px;
+	padding: 50px 0;
+}
+
+.noen {
+	background: #CCC3C2;
+	padding: 20px;
+	margin: 0 14vw;
+}
+
+.noen > h2 {
+	margin-bottom: 0;
+}
+
+.noen > h3 {
+	margin: 0;
+	font-size: 1em;
+	font-weight: 400;
+}
+
+.partner {
+	border-left: solid 6px #1E2633;;
+	text-align: left;
+	padding-left: 7px;
+
+}
+
 /*↑↑*/
 
 /*↓↓プライバシーポリシー*/
@@ -530,6 +563,14 @@ footer {
 .container-wrap h1 {
 	text-align: center;
 }
+/*↑↑*/
+
+/*↓↓お問い合わせ*/
+.accessguide {
+	
+	padding: 20px;
+}
+
 /*↑↑*/
 
 /*↓↓お問い合わせ*/
@@ -612,6 +653,14 @@ footer {
 /*width for tablet*/
 @media screen and (min-width: 481px) {
 	
+	.main-visual_content h1 {
+		font-size: 6vw;
+	}
+	
+	.main-visual_content h2{
+		font-size: 1.2em;
+	}
+	
 	.main-content_wrapper {
 		margin: 5vw 8%;
 	}
@@ -674,7 +723,10 @@ footer {
 	.main-visual_content h1 {
 		margin: 2px;
 		font-size: 4.7vw;
-		font-family: "Heisei Maru Gothic Std";
+		
+		font-family: "a-otf-ud-shin-maru-go-pr6n", "sans-serif";
+		font-style: normal;
+		font-weight: 300;
 		letter-spacing: 4px;
 	}
 	
@@ -753,5 +805,15 @@ footer {
 	
 	.onlinestorelink > img {
 		width: 400px;
+	}
+	
+/*↓フッター*/
+	.footer-nav {
+	
+	margin: 3em 10vw 1em 10vw;
+	}
+	
+	.footer-nav a {
+		font-size: 1em;
 	}
 }

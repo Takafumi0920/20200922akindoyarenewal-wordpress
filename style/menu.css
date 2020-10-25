@@ -25,6 +25,7 @@ display: block;
 	height: 100%;
 	z-index: 3;
 	right: -63vw;
+	top: 0;
 }
 
 /*.nav-open {

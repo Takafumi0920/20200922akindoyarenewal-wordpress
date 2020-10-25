@@ -5,7 +5,7 @@ Template Name: privacy-policy
 ?>
 
 <?php get_header(); ?>
-
+<div id="menuclose-wrap">
 <div class="container-wrap">
 		<h1>プライバシーポリシー</h1>
 		<p>　有限会社　夕張あきんど屋(以下弊社とします。）は、当サイトにて商品の購買をされる場合及びメールマガジンの配信などのサービスを利用される場合は、お客様に個人情報の提供をお願いしております。

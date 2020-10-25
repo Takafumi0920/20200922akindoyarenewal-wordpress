@@ -23,15 +23,19 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style/menu.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style/contactform7.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
+<link rel="apple-touch-icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/icon-192x192.png">
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.5.1.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.js"></script>
-<!--<script src="/js/menu.js"></script>
+
 
 <!--font awesome library-->
 <script src="https://kit.fontawesome.com/f8312f0c83.js" crossorigin="anonymous"></script>
 	
 <!--fontlibrary-->
+
 <script>
   (function(d) {
     var config = {
@@ -152,7 +156,7 @@ $(function(){
 	
 <style>
 	.content-image1 {
-		background-image: url("<?php echo get_template_directory_uri(); ?>/images/メロン２.jpg");
+		background-image: url("<?php echo get_template_directory_uri(); ?>/images/melon2.jpg");
 	}
 	
 	.content-image2 {
@@ -212,13 +216,7 @@ $(function(){
 		)); ?>
 				
 		<?php endif; ?>
-				<!--<ul class="header-nav" id="header-nav">
-					<li><a href="#">アクセス</a></li>
-					<li><a href="#">オンラインストア</a></li>
-					<li><a href="#">イベント情報</a></li>
-					<li><a href="#">ブログ</a></li>
-					<li><a href="#">お問い合わせ</a></li>
-				</ul>-->
+				
 					<li><a href="<?php echo esc_url( get_option( 'storelink_section' )); ?>">オンラインストア</a></li>
 				</ul>
 			</nav>

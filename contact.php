@@ -5,7 +5,7 @@ Template Name: contact
 ?>
 
 <?php get_header(); ?>
-
+<div id="menuclose-wrap">
 <div class="container-wrap">
 			<?php if ( have_posts() ) : /** ループ開始 */
 				while ( have_posts() ) : the_post(); ?>

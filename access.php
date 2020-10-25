@@ -5,10 +5,11 @@ Template Name: access
 ?>
 
 <?php get_header(); ?>
-
+<div id="menuclose-wrap">
 <div class="container-wrap">
-		<h1>お車でご来店する場合</h1>
+		<h1>アクセス</h1>
 		<div class="accessguide">
+		<h2>お車でご来店する場合</h2>
 		<p>新千歳空港から約５０分<br>
 			札幌市内から約１時間</p>
 		</div>
@@ -25,9 +26,10 @@ Template Name: access
 		</div>
 		
 	<div class="container-wrap">
-		<p>ご来店を心よりお待ちしております</p>
-		<p>営業時間１０：００〜１７：００</p>
-		<p>駐車場約１０台分完備</p>
+		<p>ご来店を心よりお待ちしております。</p>
+		<p>営業時間１０：００〜１７：００<br>
+駐車場約１０台分完備</p>
+		
 		
 	</div>
 <?php get_footer(); ?>
